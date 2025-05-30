@@ -105,12 +105,21 @@ const Header: React.FC = () => {
               >
                 Track Package
               </Link>
-              <span
+              { userData ? (
+                <span className='flex text-blue-700 gap-2 text-md font-bold'> 
+                  <h1>
+                    {userData?.name}
+                  </h1>
+                  <XCircleIcon onClick={Signout} color='red' size={25} className='cursor-pointer' />
+                </span>
+               ) : (
+                <span
                 onClick={() => setShowModal(true)}
                 className="px-2 py-1 text-blue-800 hover:text-teal-600 font-medium transition duration-150 cursor-pointer"
               >
                 Login
               </span>
+              )}
             </nav>
           </div>
         )}
