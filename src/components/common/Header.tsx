@@ -105,13 +105,6 @@ const Header: React.FC = () => {
               >
                 Track Package
               </Link>
-              <Link 
-                to="/history" 
-                className="px-2 py-1 text-slate-700 hover:text-teal-600 font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Shipment History
-              </Link>
               <span
                 onClick={() => setShowModal(true)}
                 className="px-2 py-1 text-blue-800 hover:text-teal-600 font-medium transition duration-150 cursor-pointer"
