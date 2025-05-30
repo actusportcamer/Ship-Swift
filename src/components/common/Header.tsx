@@ -57,12 +57,19 @@ const Header: React.FC = () => {
               Contact
             </Link>
               { userData ? (
-                <span className='flex text-blue-700 gap-2 text-md font-bold'> 
+                <>
+                <span className='flex text-blue-700 gap-2 text-md font-bold px-2 py-1'> 
                   <h1>
                     {userData?.name}
                   </h1>
                   <XCircleIcon onClick={Signout} color='red' size={25} className='cursor-pointer' />
                 </span>
+                  <Link to="/add-shipping" className="">
+                   <button className='px-2 py-1 text-white rounded-md bg-blue-600 hover:text-teal-600 font-medium transition duration-150 cursor-pointer'>
+                     Add Shipping
+                   </button>
+                  </Link>
+                </>
                ) : (
               <span
                 onClick={() => setShowModal(true)}
@@ -105,13 +112,23 @@ const Header: React.FC = () => {
               >
                 Track Package
               </Link>
+              <Link to="/contact" className="px-2 py-1 text-slate-700 hover:text-teal-600 font-medium transition duration-150">
+                Contact
+              </Link>
               { userData ? (
+                <>
                 <span className='flex text-blue-700 gap-2 text-md font-bold px-2 py-1'> 
                   <h1>
                     {userData?.name}
                   </h1>
                   <XCircleIcon onClick={Signout} color='red' size={25} className='cursor-pointer' />
                 </span>
+                  <Link to="/add-shipping" className="px-2 ">
+                   <button className='px-2 py-1 text-white rounded-md bg-blue-600 hover:text-teal-600 font-medium transition duration-150 cursor-pointer'>
+                     Add Shipping
+                   </button>
+                  </Link>
+                </>
                ) : (
                 <span
                 onClick={() => setShowModal(true)}
