@@ -3,7 +3,7 @@ import Layout from '../components/common/Layout'
 import { databases } from '../AppwriteConfig';
 import { Package as PackageIcon, Check, Truck, Clock, AlertTriangle, Search } from 'lucide-react';
 import { TrackingStatus } from '../types';
-import ShipCard from '../components/tracking/Shipcard';
+import ShipCard from '../components/tracking/ShipCard';
 import { account } from '../AppwriteConfig';
 
 const ShipmentHistoryPage: React.FC = () => {
