@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { MapPin, Calendar, Package, ExternalLink } from 'lucide-react';
 import StatusBadge from '../common/StatusBadge';
 import { formatDate, getDeliveryStatusMessage } from '../../utils/dateUtils';
+import { Query } from 'appwrite';
 
 
 const PackageCard = () => {
@@ -16,7 +17,11 @@ const PackageCard = () => {
       try {
         const response = await databases.listDocuments(
           '6838e548000bf42beb49',
-          '6838e5540021f3ef8ad2'
+          '6838e5540021f3ef8ad2',
+          [
+            Query.limit(2),
+            Query.orderDesc('$id')
+          ]
         );
 
         if (response.documents.length === 0) {

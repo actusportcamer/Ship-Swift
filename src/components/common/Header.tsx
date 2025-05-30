@@ -112,6 +112,13 @@ const Header: React.FC = () => {
               >
                 Track Package
               </Link>
+              {
+              userData && (
+            <Link to="/history" className="text-slate-700 hover:text-teal-600 font-medium transition duration-150">
+              Shipment History
+            </Link> 
+              )
+            }
               <Link to="/contact" className="px-2 py-1 text-slate-700 hover:text-teal-600 font-medium transition duration-150">
                 Contact
               </Link>
