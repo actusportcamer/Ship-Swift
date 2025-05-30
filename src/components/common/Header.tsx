@@ -106,7 +106,7 @@ const Header: React.FC = () => {
                 Track Package
               </Link>
               { userData ? (
-                <span className='flex text-blue-700 gap-2 text-md font-bold'> 
+                <span className='flex text-blue-700 gap-2 text-md font-bold px-2 py-1'> 
                   <h1>
                     {userData?.name}
                   </h1>
